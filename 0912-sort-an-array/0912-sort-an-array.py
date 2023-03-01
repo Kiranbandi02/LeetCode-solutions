@@ -1,5 +1,10 @@
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
+        nums.sort()
+        return nums
+        
+        
+        """
         t=[0]*len(nums)
         def merge(l,m,h):
             s1=l
@@ -36,6 +41,6 @@ class Solution:
             merge_sort(m+1,h)
             merge(l,m,h)
         merge_sort(0,len(nums)-1)
-        return nums
+        return nums"""
         
     
