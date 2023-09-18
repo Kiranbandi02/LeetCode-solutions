@@ -7,7 +7,9 @@ class Solution:
         dp=[0]*n
         dp[0]=a[0];
         for i in range(1,n):
-            t=a[i]+dp[i-2]
+            t=a[i]
+            if(i>=2):
+                t+=dp[i-2]
             nt=dp[i-1]
             dp[i]=max(t,nt)
         return dp[n-1]
